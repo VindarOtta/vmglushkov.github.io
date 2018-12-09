@@ -713,31 +713,28 @@ https://codepen.io/spankiejoe/pen/qdRpaW */
   }
 }
 /* Preloader */
-#p_prldr
-{ 
+#p_prldr{
 position: fixed;
 left: 0;
 top: 0;
-right:0;
-bottom:0;
-background-color: red;
-z-index: 100;
+right: 0;
+bottom: 0;
+background: #fff;
+z-index: 30;
+font-family: monospace;
+max-width:100vw;min-width:100vw;
+max-height:100vh;min-height:100vh;
 }
 .contpre{
 width: 250px;
 height: 100px;
 position: absolute;
-left: 50%;
-top: 48%;
-margin-left: -120px;
+left: 50%; top: 48%;
+margin-left: -125px;
 margin-top: -75px;
+color: black;
+font-size: 40px;
+letter-spacing: -2px;
 text-align: center;
-}
-#p_prldr .svg_anm {
-position: absolute;
-width: 41px;
-height: 41px;
-background: url(../images/loader.svg) center center no-repeat;
-background-size: 41px;    
-margin: -20px 0 0 -20px;
+line-height: 35px;
 }
