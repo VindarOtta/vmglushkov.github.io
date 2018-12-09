@@ -713,16 +713,17 @@ https://codepen.io/spankiejoe/pen/qdRpaW */
   }
 }
 /* Preloader */
-#p_prldr { 
+#p_prldr
+{ 
 position: fixed;
 left: 0;
 top: 0;
-right: 0;
-bottom: 0;
+right:0;
+bottom:0;
 background-color: #fff;
 z-index: 100;
 }
-.contpre {
+.contpre{
 width: 250px;
 height: 100px;
 position: absolute;
