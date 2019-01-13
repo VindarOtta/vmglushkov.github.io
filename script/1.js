@@ -133,19 +133,19 @@ function typeReWriter() {
   	if (VindarFactor == 0) { 
   		setTimeout(typeAfterWriter1, 1490);
   		document.getElementById("imgBtn").style.pointerEvents = 'none';
-  		setTimeout(nonClick, 2200);	
+  		setTimeout(nonClick, 2300);	
   	} else if (VindarFactor == 1) { 
   		setTimeout(typeAfterWriter2, 1490);
   		document.getElementById("imgBtn").style.pointerEvents = 'none';
-  		setTimeout(nonClick, 1950);
+  		setTimeout(nonClick, 2100);
   	} else if (VindarFactor == 2) {
   		setTimeout(typeAfterWriter3, 1490);
   		document.getElementById("imgBtn").style.pointerEvents = 'none';
-  		setTimeout(nonClick, 2400);
+  		setTimeout(nonClick, 2600);
   	} else if (VindarFactor == 3) {
   		setTimeout(typeAfterWriter4, 1490);
   		document.getElementById("imgBtn").style.pointerEvents = 'none';
-  		setTimeout(nonClick, 1800);
+  		setTimeout(nonClick, 2000);
   	}
   } else {
   	window.scroll(0, 250);
