@@ -679,6 +679,9 @@ https://codepen.io/spankiejoe/pen/qdRpaW */
   .tile:nth-child(3) {
     margin-top: 60px;
   }
+  .arrowTop {
+    display: block;
+  }
 }
 @media (max-width: 1150px) {
   .wrap {
