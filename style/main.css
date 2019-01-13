@@ -308,9 +308,10 @@ https://codepen.io/spankiejoe/pen/qdRpaW */
 }
 .hovicon ion-icon {
   transition: all 0.3s;
+  margin-left: 2px;
 }
 .hovicon:hover ion-icon{
-  transform: translateX(3px);
+  transform: translateX(2px);
 }
 .hovicon:after {
     pointer-events: none;
