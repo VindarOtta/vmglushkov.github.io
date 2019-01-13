@@ -185,15 +185,6 @@ function typeAfterWriter4() {
   VindarFactor = 0;
 }
 /* Клинеры */
-var j;
-function afterScroll() {
-  var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
-  if(top > 0) {
-    window.scrollBy(0, -10);
-    j = setTimeout('afterScroll()', 1);
-  } else clearTimeout(j);
-  return false;
-}
 function nonClick() {
 	document.getElementById("imgBtn").style.pointerEvents = 'auto';
 }	
@@ -206,4 +197,55 @@ function typeCleaner1() {
   document.getElementById("demo").innerHTML = "";
   document.getElementById("demo").classList.remove('loadCross');
   document.getElementById("demo").classList.remove('after_crossLoad');
+}
+/* Скролл вверх, как у телеграма */
+var j;
+function toTop() {
+  window.scroll(0, 250);
+  setTimeout(afterScroll, 1);
+}
+function afterScroll() {
+  var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);
+  if(top > 0) {
+    window.scrollBy(0, -10);
+    j = setTimeout('afterScroll()', 1);
+  } else clearTimeout(j);
+  return false;
+}
+/* Reverse sticky кнопка наверх */
+var scrolled;
+var lastScrollTop = 0;
+var arrowTop = document.getElementsByClassName('arrowTop');
+
+$(window).scroll(function(event){
+    scrolled = true;
+});
+setInterval(function() {
+    if (scrolled) {
+        hasScrolled();
+        scrolled = false;
+    }
+}, 100);
+
+function hasScrolled() {
+  var check = $(this).scrollTop();
+  /* if($(window).scrollTop() + $(window).height() > $(document).height() - 10) {
+    $(arrowTop).css({"top": "20px"});
+  } else */
+  if (window.pageYOffset >= 100) {    
+    if(Math.abs(lastScrollTop - check) <= 5)
+        return;    
+    if (check > lastScrollTop && check > 40){
+        // Scroll Down
+        $(arrowTop).css({"top": "-50px"});
+    } else {
+        // Scroll Up
+        if(check + $(window).height() < $(document).height()) {
+            $(arrowTop).css({"top": "20px"});
+        }
+      } 
+  } else {
+    $(arrowTop).css({"top": "-50px"});
+  }   
+  lastScrollTop = check;
 }
